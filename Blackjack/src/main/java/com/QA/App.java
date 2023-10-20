@@ -8,11 +8,13 @@ public class App {
 
         int player1Sum = 0;
         int dealerSum = 0;
+        int testSum = 0;
 
         ArrayList<Integer> deck = createDeck();
+        testSum = pickACardFromDeck(deck);
+        deck = removeCardFromDeck(deck, testSum);
 
         for (int i = 0; i < 2; i++) {
-//            int drawnCard = randomNumGen(2, 11);
             player1Sum = addCard(player1Sum);
             dealerSum = addCard(dealerSum);
         }
@@ -101,14 +103,25 @@ public class App {
         ArrayList<Integer> deck = new ArrayList<Integer>();
         for(int i = 1; i < 14; i++){
             for(int j = 0; j < 4 ; j++){
-                deck.add(i);
+                deck.add(Math.min(i,10));
             }
         }
         return deck;
     }
     public static int pickACardFromDeck(ArrayList<Integer> deck){
-        
+        int cardsInDeck = deck.size();
+        int cardPositionToTake = randomNumGen(0,cardsInDeck);
+        int card = deck.get(cardPositionToTake);
+        //TODO Logic if ace
+        return card;
     }
+    public static ArrayList<Integer> removeCardFromDeck(ArrayList<Integer> deck, int card){
+        Integer newCard = (Integer) card;
+        deck.remove(card);
+        return deck;
+    }
+
+
 
 }
 
