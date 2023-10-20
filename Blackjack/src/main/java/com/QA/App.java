@@ -2,6 +2,9 @@ package com.QA;
 
 public class App {
     public static void main(String[] args) {
+
+
+        
         int num1 = randomNumGen(-1, 30);
         int num2 = randomNumGen(-1, 30);
         System.out.println("Player 1 " + num1);
