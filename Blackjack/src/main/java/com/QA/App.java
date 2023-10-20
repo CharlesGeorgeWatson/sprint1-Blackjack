@@ -1,5 +1,6 @@
 package com.QA;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class App {
@@ -7,8 +8,20 @@ public class App {
 
         int player1Sum = 0;
         int dealerSum = 0;
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 //        ArrayList<Integer> player1Hand=new ArrayList<Integer>();y
 //        ArrayList<Integer> player2Hand=new ArrayList<Integer>();
+=======
+        ArrayList<Integer> deck = createDeck();
+
+
+>>>>>>> Stashed changes
+=======
+        ArrayList<Integer> deck = createDeck();
+
+
+>>>>>>> Stashed changes
         for (int i = 0; i < 2; i++) {
 //            int drawnCard = randomNumGen(2, 11);
             player1Sum = addCard(player1Sum);
@@ -93,6 +106,19 @@ public class App {
 
     public static boolean invalidHand(int cardInput) {
         return cardInput < 2; // 2 is minimum allowed score for a 2 card deal
+    }
+
+    public static ArrayList<Integer> createDeck(){
+        ArrayList<Integer> deck = new ArrayList<Integer>();
+        for(int i = 1; i < 14; i++){
+            for(int j = 0; j < 4 ; j++){
+                deck.add(i);
+            }
+        }
+        return deck;
+    }
+    public static int pickACardFromDeck(ArrayList<Integer> deck){
+        
     }
 
 }
