@@ -7,7 +7,7 @@ public class App {
 
         int player1Sum = 0;
         int dealerSum = 0;
-//        ArrayList<Integer> player1Hand=new ArrayList<Integer>();
+//        ArrayList<Integer> player1Hand=new ArrayList<Integer>();y
 //        ArrayList<Integer> player2Hand=new ArrayList<Integer>();
         for (int i = 0; i < 2; i++) {
 //            int drawnCard = randomNumGen(2, 11);
@@ -22,11 +22,20 @@ public class App {
             }
         } while (!isBust(player1Sum));
         if(isBust(player1Sum)) System.out.println("Player 1 is bust -> your score is ... " + player1Sum);
+        System.out.println("");
 
         while (shouldDealerHit(dealerSum)) {
             dealerSum = addCard(dealerSum);
             System.out.println("Dealer hits, new total is : " + dealerSum);
         }
+        if (dealerSum<=21){
+            System.out.println("Dealer stands.");
+        }
+        else{
+            System.out.println("Dealer bust.");
+        }
+        
+        System.out.println("");
         System.out.println("Player final score is " + player1Sum);
         System.out.println("Dealer final score is " + dealerSum);
         System.out.println("Player " + winCondition2Player(player1Sum, dealerSum) + " wins.");
