@@ -21,6 +21,8 @@ public class App {
                 break;
             }
         } while (!isBust(player1Sum));
+        if(isBust(player1Sum)) System.out.println("Player 1 is bust -> your score is ... " + player1Sum);
+
         while (shouldDealerHit(dealerSum)) {
             dealerSum = addCard(dealerSum);
             System.out.println("Dealer hits, new total is : " + dealerSum);
@@ -65,6 +67,7 @@ public class App {
         } else if (isBust(player1)) {
             return 2;
         } else if (isBust(player2)) {
+            System.out.println("Player 2 is bust");
             return 1;
         } else if (player1 == player2) {
             System.out.println("Draw");
