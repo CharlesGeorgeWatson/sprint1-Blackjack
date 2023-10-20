@@ -8,20 +8,9 @@ public class App {
 
         int player1Sum = 0;
         int dealerSum = 0;
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-//        ArrayList<Integer> player1Hand=new ArrayList<Integer>();y
-//        ArrayList<Integer> player2Hand=new ArrayList<Integer>();
-=======
+
         ArrayList<Integer> deck = createDeck();
 
-
->>>>>>> Stashed changes
-=======
-        ArrayList<Integer> deck = createDeck();
-
-
->>>>>>> Stashed changes
         for (int i = 0; i < 2; i++) {
 //            int drawnCard = randomNumGen(2, 11);
             player1Sum = addCard(player1Sum);
